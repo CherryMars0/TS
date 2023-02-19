@@ -1,4 +1,6 @@
 $TS-MainColor: #2a76c9;
+$Header-Theme: #353a40;
+$Main-Theme: #e9ecef;
 
 * {
     padding: 0;
@@ -16,11 +18,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color: $Main-Theme;
 
     #App {
         font-size: 22px;
         color: $TS-MainColor;
+    }
+
+    .title {
+        color: $Header-Theme;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
     }
 }

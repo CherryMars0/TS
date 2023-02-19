@@ -1,7 +1,4 @@
-import Main from './ts/Main'
-
+import Index from './ts/Index'
 import './scss/index.scss'
 
-let main = new Main("#App")
-
-
+let index = new Index("#App")
