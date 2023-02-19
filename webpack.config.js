@@ -4,7 +4,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     // 指定入口文件
-    entry: "./src/App.ts",
+    entry: {
+        'page': "./src/App.ts"
+    },
     // 开发模式使用，方便查错误
     devtool: "inline-source-map",
     // 配置服务器
@@ -53,6 +55,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
+            chunks: ['page']
         }),
     ],
 };
+
+//多页面打包的原理就是：配置多个entry和多个HtmlWebpackPlugin

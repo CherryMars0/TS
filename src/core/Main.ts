@@ -8,5 +8,8 @@ export default class Main {
     }
     render = (el: Element | null, text: string) => {
         if (el !== null) el.innerHTML = text
+        el?.addEventListener('click', () => {
+            document.location.href = '../slider.html'
+        })
     }
 }
