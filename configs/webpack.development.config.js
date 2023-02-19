@@ -75,5 +75,4 @@ module.exports = {
         }),
     ],
 };
-
-//多页面打包的原理就是：配置多个entry和多个HtmlWebpackPlugin
+// 多页面打包的原理：多个entry和多个HtmlWebpackPlugin
