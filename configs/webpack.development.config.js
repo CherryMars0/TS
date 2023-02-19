@@ -7,7 +7,6 @@ module.exports = {
     entry: {
         'page': "./src/App.ts"
     },
-    devtool: false,
     devServer: {
         static: {
             directory: path.join(__dirname, './dist'),
@@ -39,10 +38,31 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     'style-loader',
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            esModule: false
+                        }
+                    },
                     'sass-loader',
                 ],
-                exclude: /node_modules/,
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'url-loader',
+                options: {
+                    esModule: false,
+                    limit: 32 * 1024,
+                    name: '[name].[ext]',
+                    outputPath:'assets/images'
+                }
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+                options: {
+                    esModule: false,
+                }
             }
         ],
     },
