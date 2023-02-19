@@ -1,4 +1,4 @@
-import Main from './core/Main'
+import Main from './ts/Main'
 
 import './scss/index.scss'
 

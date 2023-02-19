@@ -1,11 +1,13 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "App.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode=development --config ./webpack.config.js",
-    "build": "webpack --mode=production --config ./webpack.config.js"
+    "dev-server": "webpack-dev-server --config ./configs/webpack.development.config.js",
+    "dev-build": "webpack --config ./configs/webpack.development.config.js",
+    "prod-server": "webpack-dev-server --config ./configs/webpack.production.config.js",
+    "prod-build": "webpack --config ./configs/webpack.production.config.js"
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
